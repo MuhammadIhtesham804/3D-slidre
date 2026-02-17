@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="output.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css">
+
+    <style>
+      .playwrite-hu- {
+        font-family: "Playwrite HU", cursive;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+      }
+    </style>
+  </head>
+
+  <body class="overflow-x-hidden bg-gray-900">
+    <section
+      class="w-full h-[100vh] bg-[url('/bg4.jpg')] bg-cover bg-center relative flex flex-col items-center justify-center"
+    >
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
+
+      <!-- Heading -->
+      <h1
+        class="text-white text-6xl md:text-7xl font-semibold text-center z-10 playwrite-hu- drop-shadow-[0_3px_3px_rgba(0,0,0,0.4)]"
+      >
+        Weather Forecast
+      </h1>
+
+      <!-- Form -->
+      <form
+        onsubmit="checkWeather(); return false;"
+        class="w-[320px] sm:w-[360px] h-[400px] bg-white/10 backdrop-blur-lg shadow-2xl mt-10 rounded-2xl flex flex-col items-center justify-center space-y-6 border border-white/20 z-10"
+      >
+        <p
+          class="text-3xl text-white font-semibold playwrite-hu- tracking-wide cursor-pointer"
+        >
+          Check Weather
+        </p>
+
+        <input
+          type="text"
+          id="cities"
+          placeholder="Enter your city"
+          class="w-[80%] h-11 rounded-md px-3 text-white placeholder-gray-200 bg-white/20 border border-white/40 focus:outline-none focus:ring-2 focus:ring-white/60 transition-all duration-300 playwrite-hu-"
+        />
+
+        <button
+          onclick="checkWeather();"
+          class="w-[80%] h-11 bg-gradient-to-r from-white to-gray-200 text-black text-lg font-semibold rounded-md hover:from-black hover:to-gray-800 hover:text-white transition-all duration-300 playwrite-hu- shadow-lg"
+        >
+          Check
+        </button>
+
+        <p
+          id="result"
+          class="text-center text-white text-2xl playwrite-hu- px-3 mt-3"
+        ></p>
+      </form>
+    </section>
+
+    <script>
+        async function checkWeather() {
+
+    const nameRef = document.getElementById("cities");
+    const resultRef = document.getElementById("result");
+
+
+    const city = nameRef.value.trim();
+
+    const checkresult = await fetch(`https://p2pclouds.up.railway.app/v1/learn/weather?city=${city}`);
+
+    const weather = await checkresult.json();
+
+    console.log(weather);
+    
+
+    const currentTemp = weather.current.temp_c;
+  resultRef.innerHTML = ` ${city}  ${currentTemp}`
+}
+    </script>
+  </body>
+</html>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>360 Clear 3D Slider</title>
-    <link rel="stylesheet" href="output.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css   ">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             /* Desktop Config */
@@ -54,8 +57,15 @@
         }
 
         @keyframes floatingText {
-            0%, 100% { transform: translateY(0) skewX(180deg); }
-            50% { transform: translateY(-15px) skewX(180deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) skewX(180deg);
+            }
+
+            50% {
+                transform: translateY(-15px) skewX(180deg);
+            }
         }
 
         .carousel-ring {
@@ -66,14 +76,19 @@
         }
 
         @keyframes spin {
-            from { transform: rotateY(0deg); }
-            to { transform: rotateY(360deg); }
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
         }
 
         .card {
             backface-visibility: visible;
             filter: brightness(0.95);
-            -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0,0,0,0.1));
+            -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1));
         }
 
         .floor {
@@ -84,34 +99,62 @@
         }
     </style>
 </head>
+
 <body class="bg-slate-50 h-screen flex items-center justify-center overflow-hidden">
 
+    <!-- HIDDEN AUDIO -->
+    <audio id="bgAudio" src="YOUR_AUDIO_URL_HERE" loop style="display:none;"></audio>
+
     <div class="stage relative w-full h-full flex items-center justify-center" id="stage">
-        
+
         <div class="center-content absolute z-10 text-center pointer-events-none">
-            <h2 class="text-slate-700 leading-none" style="font-family: 'Dancing Script', cursive; font-size: clamp(2rem, 8vw, 4.5rem);">Happy<br>Birthday<br>Hinata</h2>
+            <h2 class="text-slate-700 leading-none"
+                style="font-family: 'Dancing Script', cursive; font-size: clamp(2rem, 8vw, 4.5rem);">
+                Happy<br>Birthday<br>Qamar ladaly</h2>
         </div>
 
         <div class="floor absolute -z-10"></div>
 
         <div class="carousel-ring relative" id="ring">
-            <!-- YOUR ORIGINAL IMAGES RESTORED -->
-            <div class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100"><img src="https://m.media-amazon.com/images/I/71dAIiXhTQL._AC_UF1000,1000_QL80_.jpg" class="w-full h-full object-cover"></div>
-            <!-- FIXED: This image link was broken/not a direct image, now fixed to show correctly -->
-            <!-- <div class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100"><img src="https://m.media-amazon.com/images/I/61m6XpY6p6L._AC_UF1000,1000_QL80_.jpg" class="w-full h-full object-cover"></div> -->
-            <div class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100"><img src="https://m.media-amazon.com/images/I/61UGWqC3SEL._SL1360_.jpg" class="w-full h-full object-cover"></div>
-            <div class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP2qhyWahx0uEurZqR_mjfLYff1TOXnBm8eA&s" class="w-full h-full object-cover"></div>
-            <div class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100"><img src="https://media.printler.com/media/photo/193484-2.jpg?rmode=crop&width=638&height=900" class="w-full h-full object-cover"></div>
-            <div class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRodFxdXiCP8pKC9_zYXErRAf994kNynt2jWA&s" class="w-full h-full object-cover"></div>
-            <div class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100"><img src="https://cdn.displate.com/artwork/270x380/2025-02-24/7f4304e7-bab6-4fe8-9ed9-b21790c11f5f.jpg" class="w-full h-full object-cover"></div>
-            <div class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100"><img src="https://m.media-amazon.com/images/I/417YwW3UwsL._AC_UF1000,1000_QL80_.jpg" class="w-full h-full object-cover"></div>
+            <div
+                class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQR1q9vJiXYznGWC78jbLZVMAsmwM54I8VRUTcng41L7WLy0wbl"
+                    class="w-full h-full object-cover"></div>
+            <div
+                class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQR1q9vJiXYznGWC78jbLZVMAsmwM54I8VRUTcng41L7WLy0wbl"
+                    class="w-full h-full object-cover"></div>
+            <div
+                class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQR1q9vJiXYznGWC78jbLZVMAsmwM54I8VRUTcng41L7WLy0wbl"
+                    class="w-full h-full object-cover"></div>
+            <div
+                class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQR1q9vJiXYznGWC78jbLZVMAsmwM54I8VRUTcng41L7WLy0wbl"
+                    class="w-full h-full object-cover"></div>
+            <div
+                class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQR1q9vJiXYznGWC78jbLZVMAsmwM54I8VRUTcng41L7WLy0wbl"
+                    class="w-full h-full object-cover"></div>
+            <div
+                class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQR1q9vJiXYznGWC78jbLZVMAsmwM54I8VRUTcng41L7WLy0wbl"
+                    class="w-full h-full object-cover"></div>
+            <div
+                class="card absolute w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-white shadow-lg opacity-100">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQR1q9vJiXYznGWC78jbLZVMAsmwM54I8VRUTcng41L7WLy0wbl"
+                    class="w-full h-full object-cover"></div>
         </div>
     </div>
 
     <script>
         const cards = document.querySelectorAll('.card');
         const stage = document.getElementById('stage');
+        const audio = document.getElementById('bgAudio');
         const count = cards.length;
+
+        // SET AUDIO TIMER (Start at X seconds)
+        const startTime = 0;
 
         function init() {
             const radius = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--ring-radius'));
@@ -119,9 +162,23 @@
                 const angle = i * (360 / count);
                 card.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
             });
+
+            audio.currentTime = startTime;
+
+            // Start audio after site is "properly open" (loaded)
+            // Added interaction triggers to bypass browser autoplay restrictions
+            const startPlaying = () => {
+                audio.play().catch(e => console.log("Waiting for user interaction to play audio."));
+                window.removeEventListener('mousemove', startPlaying);
+                window.removeEventListener('touchstart', startPlaying);
+                window.removeEventListener('click', startPlaying);
+            };
+
+            window.addEventListener('mousemove', startPlaying);
+            window.addEventListener('touchstart', startPlaying);
+            window.addEventListener('click', startPlaying);
         }
 
-        // Tilt Interaction
         function handleMove(e) {
             const xVal = e.touches ? e.touches[0].pageX : e.pageX;
             const yVal = e.touches ? e.touches[0].pageY : e.pageY;
@@ -134,7 +191,11 @@
         document.addEventListener('touchmove', handleMove);
         window.addEventListener('resize', init);
 
-        window.onload = init; // No more updateFocus function
+        // Site "properly open" trigger
+        window.onload = () => {
+            setTimeout(init, 500); // Small delay to ensure smooth visual opening
+        };
     </script>
 </body>
+
 </html>
